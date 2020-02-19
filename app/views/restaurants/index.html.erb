@@ -1,0 +1,18 @@
+<h1>Rio's Restaurants</h1>
+<p><strong>The best selection in the world!</strong></p>
+<div><%= link_to "Create new restaurant", new_restaurant_path(@restaurant), class: "btn btn-ghost"%></div>
+
+
+  <div class="container">
+  <% @restaurants.each do |restaurant| %>
+    <p><strong><%= link_to restaurant.name, restaurant_path(restaurant)%></strong></p>
+    <ul>
+      <li> <p><%= restaurant.address %></p></li>
+      <li> <p><%= restaurant.phone_number %></p></li>
+      <li> <p><%= restaurant.category %></p></li>
+    </ul>
+  <%end %>
+  </div>
+
+
+
